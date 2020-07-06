@@ -1,11 +1,9 @@
 # SocialDistancingAI
 Using python, deep learning and computer vision to monitor social distancing.
-Idea Credits: LandingAI
 
-[![Watch the video](/images/cover.png)](https://www.youtube.com/watch?v=kxFwbn7Tap0&feature=emb_title)
 
 # How to install?
-It’s advisable to [make a new virtual environment](https://towardsdatascience.com/setting-up-python-platform-for-machine-learning-projects-cfd85682c54b) for this project and install the dependencies. Following steps can be taken to download get started with the project
+It’s advisable to [make a new virtual environment] for this project and install the dependencies. Following steps can be taken to download get started with the project
 
 ## Clone the repository
 ```
