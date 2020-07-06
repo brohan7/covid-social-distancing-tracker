@@ -42,14 +42,5 @@ These 4 points need to be provided in a pre-defined order which is following.
 #### Last 2 points:
 The last two points are used to mark two points 6 feet apart in the region of interest. For example this could be a person's height (easier to mark on the frame)
 
-The gif below will help understand the points better
-![mark4points](images/mark4points.gif)
-![mark4points](images/pedestrian.gif)
 
-## How does it work?
-The complete block diagram of the algorithm can be seen below.
-![Block Diagram](images/block_diagram.png)
 
-A detailed article on the working of this project can be found [here](https://medium.com/@aqeel.anwar/monitoring-social-distancing-using-ai-c5b81da44c9f)
-
-__Idea credits: LandingAI__
