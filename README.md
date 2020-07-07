@@ -40,5 +40,18 @@ These 4 points need to be provided in a pre-defined order which is following.
 #### Last 2 points:
 The last two points are used to mark two points 6 feet apart in the region of interest. For example this could be a person's height (easier to mark on the frame)
 
+##### How does it work?
+Detecting distances between pedestrian from monocular images without any extra information is not possible. One way (not very accurate though) is to ask user for specific inputs leading to a distance estimation between the pedestrians. If the user could mark two points on the frame that are 6 feet apart, using extrapolation, one could find the distance between different points on the frame. This would have been true if the camera was equidistant to all the points on the plane where the pedestrians were walking. The closer the pedestrians are to the camera the bigger they are. The closer the two points (which are same number of pixels apart ) on the frame to the camera, the smaller is the actual distance between them.
+To cope this issue, the code receives 4 points input from the user to mark two lines that are parallel seen from the above. The region marked by these 4 points are considered ROI (can be seen in yellow in the gif above). This polygon shaped ROI is then warped into a rectangle which becomes the bird eye view. This bird eye view then has the property of points (which are same number of pixels apart) being equidistant no matter where they are. All it needs is a multiplier that maps the distance between two points in pixels to distance in real life units (such as feet or meters). This is where the last two user input points come in play.
+Deep Learning is used to detect and localize the pedestrians which are then mapped to a bird eye view projection of the camera as explained above. Once we have the coordinates of the pedestrians in the bird eye view the social distancing parameters become straight forward.
+The complete block diagram of the algorithm can be seen below.
 
+###### Suggested improvements
+The code could use a lot of improvements in a number of area. A few are suggested below
+A more accurate approach of mapping the camera frame to bird eye view
+The code uses an existing multi-class classifier that was trained on 1000 classes from COCO dataset. The code could use a re-trained classifier specifically trained for binary class (pedestrian, no-pedestrian).
+More accurate way of calculating social distance parameters can be introduced.
+
+######Summary:
+The algorithm can be used to analyze social distancing in a public area and carry out necessary actions to better deal with the pandemic. Automating the task will lead in effective actions taken in short time hence equipping us better to deal with the situation. The complete code is available here at GitHub. Feel free to modify and improve it.
 
