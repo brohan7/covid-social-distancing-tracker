@@ -52,6 +52,7 @@ A more accurate approach of mapping the camera frame to bird eye view
 The code uses an existing multi-class classifier that was trained on 1000 classes from COCO dataset. The code could use a re-trained classifier specifically trained for binary class (pedestrian, no-pedestrian).
 More accurate way of calculating social distance parameters can be introduced.
 
-######Summary:
+Summary:
+
 The algorithm can be used to analyze social distancing in a public area and carry out necessary actions to better deal with the pandemic. Automating the task will lead in effective actions taken in short time hence equipping us better to deal with the situation. The complete code is available here at GitHub. Feel free to modify and improve it.
 
